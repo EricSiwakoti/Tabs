@@ -1,0 +1,38 @@
+.tabs {
+  display: grid;
+}
+
+[role="tablist"] {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 5px;
+}
+
+[role="tabpanel"] {
+  background: yellow;
+  padding: 3rem;
+}
+
+button {
+  padding: 10px;
+  background: grey;
+  border: 0;
+  color: black;
+  border-radius: 5px 5px 0 0;
+  --bs-color: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 -2px 5px var(--bs-color);
+  cursor: pointer;
+}
+
+button[aria-selected="true"] {
+  background: yellow;
+  box-shadow: none;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: bolder;
+}
+
+button:focus {
+  outline: 0;
+  --bs-color: rgba(0, 0, 0, 0.6);
+  color: var(--bs-color);
+}
